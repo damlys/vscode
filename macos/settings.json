@@ -35,17 +35,13 @@
 
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
-  "diffEditor.maxComputationTime": 10000,
-  "yaml.format.printWidth": 9999,
-  "prettier.printWidth": 9999,
-  "shellcheck.exclude": ["1090"],
   "files.associations": {
     "Dockerfile.bash": "shellscript",
     "Kptfile": "yaml",
     "*.yml": "yaml"
   },
   "[css][scss][less]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[dockerfile]": { "editor.defaultFormatter": "ms-azuretools.vscode-docker" },
+  "[dockerfile]": { "editor.defaultFormatter": "docker.docker" },
   "[go]": { "editor.defaultFormatter": "golang.go" },
   "[hcl]": { "editor.defaultFormatter": "hashicorp.hcl" },
   "[helm]": { "editor.defaultFormatter": null, "editor.formatOnSave": false },
@@ -59,20 +55,22 @@
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[xml]": { "editor.defaultFormatter": "redhat.vscode-xml" },
   "[yaml]": { "editor.defaultFormatter": "redhat.vscode-yaml" },
-  "yaml.maxItemsComputed": -1,
+  "prettier.printWidth": 9999,
+  "shellcheck.exclude": ["1090"],
+  "yaml.format.printWidth": 9999,
 
   // "workbench.editorAssociations": {
   //   "*.md": "vscode.markdown.preview.editor"
   // },
 
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": false,
   "diffEditor.codeLens": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.wordWrap": "off",
   "editor.bracketPairColorization.enabled": false,
-  "editor.codeLens": false, // github copilot requires "true"
+  "editor.codeLens": false,
   "editor.colorDecorators": false,
-  "editor.folding": true,
+  "editor.folding": false,
   "editor.guides.indentation": false,
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "off",
@@ -90,6 +88,7 @@
   "explorer.confirmDragAndDrop": false,
   "markdown-preview-github-styles.colorTheme": "light",
   "scm.compactFolders": false,
+  "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.tabs.showActions": "never",
   "testing.gutterEnabled": true,
   "window.customTitleBarVisibility": "never",
@@ -98,7 +97,7 @@
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.enablePreview": false,
   "workbench.editor.openPositioning": "first",
-  "workbench.editor.showTabs": "single",
+  "workbench.editor.showTabs": "none",
   "workbench.editor.splitOnDragAndDrop": false,
   "workbench.iconTheme": null,
   "workbench.settings.editor": "json",
@@ -111,6 +110,7 @@
 
   "git.autoRepositoryDetection": "subFolders",
   "git.openRepositoryInParentFolders": "never",
+  "git.repositoryScanMaxDepth": 5,
   "gitlens.blame.format": "${author|16?} ${agoOrDate|14-}",
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.enabled": false,
@@ -122,15 +122,6 @@
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.hovers.enabled": false,
   "gitlens.showWhatsNewAfterUpgrades": false,
-
-  "vs-kubernetes": {
-    "vs-kubernetes.crd-code-completion": "enabled"
-  },
-
-  "yaml.schemas": {
-    "https://gist.githubusercontent.com/todd-dsm/6e239988e3283aa917c6de9495927088/raw/4831c0c24eea2573e58829dbd223b6934d7df32d/empty_schema.json": "cluster.yaml" // https://gist.github.com/todd-dsm/6e239988e3283aa917c6de9495927088
-  },
-  "yaml.customTags": [],
 
   "cSpell.language": "en,pl",
   "cSpell.userWords": [
@@ -146,19 +137,13 @@
     "chdir",
     "cloudcode",
     "crds",
-    "damlys",
     "datapath",
     "devcontainer",
     "dnssec",
     "fullname",
     "gcloud",
-    "goapp",
-    "gogcp",
-    "gogke",
-    "gomod",
     "googlecloudtools",
     "goreleaser",
-    "gorun",
     "gotmpl",
     "gotpl",
     "gserviceaccount",
@@ -174,12 +159,11 @@
     "kubernetes",
     "kustomization",
     "kustomize",
-    "Kyverno",
+    "kyverno",
     "letsencrypt",
     "metricbeat",
     "minikube",
     "nmap",
-    "noname",
     "otelcol",
     "otlphttp",
     "quickstart",
@@ -200,13 +184,9 @@
     "workdir"
   ],
 
-  "redhat.telemetry.enabled": false,
+  "cloudcode.project": "",
   "geminicodeassist.project": "",
-  "cloudcode.project": "damlys-general",
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  }
+  "geminicodeassist.displayInlineContextHint": false,
+
+  "redhat.telemetry.enabled": false
 }
